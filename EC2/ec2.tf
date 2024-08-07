@@ -1,8 +1,8 @@
 resource "aws_instance" "ec2-instance" {
   ami = "ami-0b9b8c2d5084f0e09"
   instance_type = "t2.micro"
-  key_name = "terraform-key"
-  subnet_id = "subnet-03e33261c7f2f5d56"
+  key_name = ""
+  subnet_id = ""
   vpc_security_group_ids = [aws_security_group.example.id]
   
   tags = merge(var.common_tags, {
