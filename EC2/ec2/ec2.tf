@@ -1,5 +1,5 @@
 resource "aws_instance" "ec2-instance" {
-  ami = "ami-0b9b8c2d5084f0e09"
+  ami = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
   key_name = ""
   subnet_id = ""
